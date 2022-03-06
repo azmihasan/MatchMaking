@@ -82,13 +82,15 @@ def parCompare(lpar):
     m_vars = []
     f_vars = []
     for i in range(len(lpar)):
-        # using the unpack Method to split a string into char array in Python https://www.delftstack.com/howto/python/split-string-to-a-list-of-characters/
+        # using the unpack Method to split a string into char array in Python
+        # https://www.delftstack.com/howto/python/split-string-to-a-list-of-characters/
         m_var = [*lpar[i][0]][0]
         f_var = [*lpar[i][0]][1]
         m_vars.append(m_var)
         f_vars.append(f_var)
     
-    # to find duplicate values in a list https://stackoverflow.com/questions/9835762/how-do-i-find-the-duplicates-in-a-list-and-create-another-list-with-them
+    # to find duplicate values in a list
+    # https://stackoverflow.com/questions/9835762/how-do-i-find-the-duplicates-in-a-list-and-create-another-list-with-them
     print(m_vars)
     m_vars = [item for item, count in collections.Counter(m_vars).items() if count > 1]
     print(m_vars)
@@ -121,28 +123,28 @@ def createPar():
 
 def manualPar():
     m_result = [
-        par('A','male','1','3','2'),
-        par('B','male','1','3','2'),
-        par('C','male','4','9','7'),
-        # par('D','male','2','1','6'),
-        # par('E','male','1','8','7'),
-        # par('F','male','6','3','4'),
-        # par('G','male','5','7','8'),
-        # par('H','male','9','3','2'),
-        # par('I','male','4','6','1'),
-        # par('J','male','3','2','5')
+        par('A','male','1','2','3'),
+        par('B','male','2','3','1'),
+        par('C','male','1','3','2'),
+        par('D','male','2','1','6'),
+        par('E','male','1','8','7'),
+        par('F','male','6','3','4'),
+        par('G','male','5','7','8'),
+        par('H','male','9','3','2'),
+        par('I','male','4','6','1'),
+        par('J','male','3','2','5')
     ]
     f_result = [
-        par('1','female','A','J','E'),
-        par('2','female','A','H','I'),
-        par('3','female','A','C','B'),
-        # par('4','female','B','C','F'),
-        # par('5','female','B','E','D'),
-        # par('6','female','D','H','J'),
-        # par('7','female','I','J','F'),
-        # par('8','female','C','F','H'),
-        # par('9','female','A','B','H'),
-        # par('10','female','E','J','H')
+        par('1','female','A','B','C'),
+        par('2','female','C','B','A'),
+        par('3','female','C','A','B'),
+        par('4','female','B','C','F'),
+        par('5','female','B','E','D'),
+        par('6','female','D','H','J'),
+        par('7','female','I','J','F'),
+        par('8','female','C','F','H'),
+        par('9','female','A','B','H'),
+        par('10','female','E','J','H')
     ]
     return m_result, f_result
         

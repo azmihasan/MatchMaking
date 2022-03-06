@@ -121,7 +121,7 @@ def createPar():
 
 def manualPar():
     m_result = [
-        par('A','male','1','3','2'),
+        par('A','male','1','4','2'),
         par('B','male','1','3','2'),
         par('C','male','4','9','7'),
         # par('D','male','2','1','6'),
